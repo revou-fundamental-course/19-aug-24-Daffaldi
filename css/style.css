@@ -81,7 +81,7 @@ nav ul li a {
 }
 
 .welcome {
-    background-image: url(assets/MHT.jpg);
+    background-image: url(/assets/MHT.jpg);
     background-size: cover;
     background-position: center;
     height: 578px;
@@ -333,7 +333,7 @@ footer {
 }
 
 .banner {
-    background-image: url(assets/profile.jpg);
+    background-image: url(/assets/profile.jpg);
     background-size: cover;
     background-position: center;
     height: 450px;
