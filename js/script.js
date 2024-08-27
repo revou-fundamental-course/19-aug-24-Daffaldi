@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        const welcomeMessage = document.getElementById('welcomeMessage');
         if (welcomeMessage) {
             const userName = localStorage.getItem('userName');
             if (!userName) {
