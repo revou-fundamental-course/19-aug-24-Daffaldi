@@ -1,31 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     const welcomeMessage = document.getElementById('welcomeMessage');
     
-    // Check if the page has been loaded before
-    if (!localStorage.getItem('pageLoaded')) {
-        // If it's the first load, set the flag and reload the page
-        localStorage.setItem('pageLoaded', 'true');
-        window.location.reload();
-    } else {
-        // If it's not the first load, check if there's a stored name
-        const storedName = localStorage.getItem('userName');
+    // Check if the userName is already stored
+    const storedName = localStorage.getItem('userName');
+
+    if (storedName) {
+        // Use the stored name for the welcome message
         if (welcomeMessage) {
-            if (storedName) {
-                // Use the stored name for the welcome message
-                welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
-            } else {
-                // Prompt for the name if not stored
-                const enteredName = prompt('Please enter your name:');
-                if (enteredName) {
-                    localStorage.setItem('userName', enteredName);
-                    welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
-                }
+            welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
+        }
+    } else {
+        // If no name is stored, prompt for the name and reload the page
+        const enteredName = prompt('Please enter your name:');
+        if (enteredName) {
+            localStorage.setItem('userName', enteredName);
+            if (welcomeMessage) {
+                welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
             }
+            // Reload the page to apply the changes
+            window.location.reload();
         }
     }
 });
-
-
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
