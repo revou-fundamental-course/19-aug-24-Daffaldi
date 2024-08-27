@@ -333,7 +333,7 @@ footer {
 }
 
 .banner {
-    background-image: url(/assets/AAA.jpg);
+    background-image: url(/assets/profile.jpg);
     background-size: cover;
     background-position: center;
     height: 450px;
@@ -363,7 +363,7 @@ footer {
 
 .about {
     padding: 40px 20px;
-    background-color: #f0f8ff;]
+    background-color: #f0f8ff;
 }
 
 .vision-mission {
