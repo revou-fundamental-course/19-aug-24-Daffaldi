@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Always prompt the user for their name when they visit the page
             const enteredName = prompt('Please enter your name:');
             if (enteredName) {
-                localStorage.setItem('userName', enteredName);
                 document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
             }
         }
     }
 });
+
 
 
     const contactForm = document.getElementById('messageForm');
