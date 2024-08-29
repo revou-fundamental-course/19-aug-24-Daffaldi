@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+localStorage.removeItem('userName');
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
