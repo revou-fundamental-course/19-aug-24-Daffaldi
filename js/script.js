@@ -4,20 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check if the userName is already stored
     const storedName = localStorage.getItem('userName');
 
-    if (storedName) {
-        // Use the stored name for the welcome message
-        if (welcomeMessage) {
-            welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
-        }
-    } else {
-        // If no name is stored, prompt for the name and reload the page
         const enteredName = prompt('Please enter your name:');
         if (enteredName) {
             localStorage.setItem('userName', enteredName);
             if (welcomeMessage) {
                 welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
             }
-            // Reload the page to apply the changes
             window.location.reload();
         }
     }
