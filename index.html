@@ -8,8 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+<style>
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .facility {
+        width: 100%;
+    }
+
+    .welcome {
+        padding: 10px;
+    }
+
+}
+</style>
+
 <body class="homepage">
-    <header>
+    <header class="header">
         <div class="logo">
             <img src="assets/MHT.jpg" alt="Logo" width="50">
         </div>
@@ -24,9 +42,10 @@
     </header>    
 
 
-    <section class="welcome" style="background-image: url(assets/MHT.jpg);">
+    <section class="welcome" style="background-image: url('/assets/MHT.jpg');">
         <h1 id="welcomeMessage">Hi, Welcome to the Website</h1>
         <p>Ini adalah website latihan pertama</p>
+        <button id="renameButton">Rename</button>
     </section>
 
 
@@ -37,15 +56,15 @@
         <h2>Our Facilitation</h2>
         <div class="facilities">
             <div class="facility">
-                <img src="assets/MHT.jpg" alt="Professional Teacher" class="icon">
+                <img src="/assets/MHT.jpg" alt="Professional Teacher" class="icon">
                 <p>Professional Teacher</p>
             </div>
             <div class="facility">
-                <img src="assets/MHT.jpg" alt="Sport Field" class="icon">
+                <img src="/assets/MHT.jpg" alt="Sport Field" class="icon">
                 <p>Sport Field</p>
             </div>
             <div class="facility">
-                <img src="assets/MHT.jpg" alt="Classroom" class="icon">
+                <img src="/assets/MHT.jpg" alt="Classroom" class="icon">
                 <p>Classroom</p>
             </div>
         </div>
