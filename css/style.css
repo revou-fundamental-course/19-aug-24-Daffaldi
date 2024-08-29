@@ -26,7 +26,6 @@ header {
     object-fit: cover;
 }
 
-
 nav ul {
     list-style: none;
     margin: 0;
@@ -82,6 +81,7 @@ nav ul li a {
 }
 
 .welcome {
+    background-image: url(/assets/MHT.jpg);
     background-size: cover;
     background-position: center;
     height: 578px;
@@ -96,18 +96,6 @@ nav ul li a {
     padding-top: 30px;
     padding-right: 50%;
 }
-
-.banner {
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 
 .welcome h1,
 .welcome p {
@@ -302,4 +290,134 @@ footer {
         margin-top: 20px;
         width: 100%;
     }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .facility {
+        width: 100%;
+    }
+
+    form label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .welcome {
+        padding: 10px;
+    }
+
+    form button {
+        padding: 10px;
+    }
+
+    .hero-image img, .banner-image img {
+        width: 100%;
+    }
+}
+
+.banner {
+    background-image: url(/assets/profile.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-image img {
+    display: none;
+}
+
+
+
+.content-box {
+    background-color: #007bff;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about {
+    padding: 40px 20px;
+    background-color: #f0f8ff;
+}
+
+.vision-mission {
+    padding: 40px 20px;
+    background-color: #e6f9ff;
+}
+
+.vision-mission h2 {
+    color: #ffffff;
+}
+
+.vision-mission h3 {
+    color: hsl(0, 0%, 100%);
+}
+
+.profile-container {
+    display: flex;
+    align-items: stretch;
+    margin: 20px;
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%;
+}
+
+.about, .vision-mission {
+    flex: 1;
+}
+
+.content-box {
+    background-color: #007bff;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    text-align: center;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+}
+
+.image-content img {
+    height: auto; 
+    max-height: 100%;
+    width: 100%;
+    border-radius: 8px;
 }
