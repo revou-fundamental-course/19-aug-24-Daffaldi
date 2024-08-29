@@ -1,42 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const welcomeMessage = document.getElementById('welcomeMessage');
-    const renameButton = document.getElementById('renameButton');
-    
-    // Retrieve the stored name from localStorage
-    const storedName = localStorage.getItem('userName');
-
-    if (storedName) {
-        // Use the stored name for the welcome message
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        const welcomeMessage = document.getElementById('welcomeMessage');
         if (welcomeMessage) {
-            welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
-        }
-    } else {
-        // Prompt for the name if not stored
-        const enteredName = prompt('Please enter your name:');
-        if (enteredName) {
-            localStorage.setItem('userName', enteredName);
-            if (welcomeMessage) {
-                welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
-            }
-            // Reload the page to apply the changes
-            window.location.reload();
-        }
-    }
-
-    // Handle the rename button click
-    if (renameButton) {
-        renameButton.addEventListener('click', function() {
-            const newName = prompt('Enter your new name:');
-            if (newName) {
-                localStorage.setItem('userName', newName);
-                if (welcomeMessage) {
-                    welcomeMessage.textContent = `Hi ${newName}, Welcome To Website`;
+            const userName = localStorage.getItem('userName');
+            if (!userName) {
+                const enteredName = prompt('Please enter your name:');
+                if (enteredName) {
+                    localStorage.setItem('userName', enteredName);
+                    document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
                 }
+            } else {
+                document.getElementById('welcomeMessage').textContent = `Hi ${userName}, Welcome To Website`;
             }
-        });
+        }
     }
-});
-
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
@@ -59,3 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+
+localStorage.removeItem('userName');
