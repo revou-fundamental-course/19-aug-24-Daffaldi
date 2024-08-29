@@ -1,15 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const welcomeMessage = document.getElementById('welcomeMessage');
-    const enteredName = prompt('Please enter your name:');
-    if (enteredName) {
-        if (welcomeMessage) {
-            welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
-        }
-        window.location.reload();
-    }
-});
+    const renameButton = document.getElementById('renameButton');
+        const storedName = localStorage.getItem('userName');
 
-localStorage.removeItem('userName');
+    if (storedName) {
+        if (welcomeMessage) {
+            welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
+        }
+    } else {
+        const enteredName = prompt('Please enter your name:');
+        if (enteredName) {
+            localStorage.setItem('userName', enteredName);
+            if (welcomeMessage) {
+                welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+            }
+            window.location.reload();
+        }
+    }
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
