@@ -1,14 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
-        const welcomeMessage = document.getElementById('welcomeMessage');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    const renameButton = document.getElementById('renameButton');
+    
+    // Retrieve the stored name from localStorage
+    const storedName = localStorage.getItem('userName');
+
+    if (storedName) {
+        // Use the stored name for the welcome message
         if (welcomeMessage) {
-            // Always prompt the user for their name when they visit the page
-            const enteredName = prompt('Please enter your name:');
-            if (enteredName) {
-                localStorage.setItem('userName', enteredName);
-                document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
-            }
+            welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
         }
+    } else {
+        // Prompt for the name if not stored
+        const enteredName = prompt('Please enter your name:');
+        if (enteredName) {
+            localStorage.setItem('userName', enteredName);
+            if (welcomeMessage) {
+                welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+            }
+            // Reload the page to apply the changes
+            window.location.reload();
+        }
+    }
+
+    // Handle the rename button click
+    if (renameButton) {
+        renameButton.addEventListener('click', function() {
+            const newName = prompt('Enter your new name:');
+            if (newName) {
+                localStorage.setItem('userName', newName);
+                if (welcomeMessage) {
+                    welcomeMessage.textContent = `Hi ${newName}, Welcome To Website`;
+                }
+            }
+        });
     }
 });
 
@@ -34,5 +59,3 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-
