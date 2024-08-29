@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+<<<<<<< HEAD
 =======
     const welcomeMessage = document.getElementById('welcomeMessage');
     const enteredName = prompt('Please enter your name:');
@@ -25,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
 });
 >>>>>>> parent of 0d5dee7 (Update script.js)
+=======
+>>>>>>> parent of 77e7301 (Update script.js)
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
