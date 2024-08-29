@@ -56,7 +56,7 @@ nav ul li a:hover {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -208,7 +208,7 @@ form input[type="radio"] {
     margin-bottom: 0;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .radio-group {
         justify-content: flex-start;
         gap: 10px;
@@ -258,7 +258,7 @@ form button {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     form, .submitted-info {
         max-width: 100%;
     }
@@ -292,10 +292,9 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
         padding: 10px;
     }
 
