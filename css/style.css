@@ -104,17 +104,6 @@ nav ul li a {
     margin: 10px 0;
 }
 
-@media (max-width: 600px) {
-    .welcome {
-        padding: 20px;
-        text-align: center;
-    }
-
-    #welcomeMessage {
-        font-size: 18px;
-    }
-}
-
 section {
     margin: 0;
     padding: 50px;
