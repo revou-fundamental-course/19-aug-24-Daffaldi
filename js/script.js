@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
         const welcomeMessage = document.getElementById('welcomeMessage');
         if (welcomeMessage) {
@@ -8,11 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
             if (enteredName) {
                 localStorage.setItem('userName', enteredName);
                 document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
+=======
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    
+    // Check if the page has been loaded before
+    if (!localStorage.getItem('pageLoaded')) {
+        // If it's the first load, set the flag and reload the page
+        localStorage.setItem('pageLoaded', 'true');
+        window.location.reload();
+    } else {
+        // If it's not the first load, check if there's a stored name
+        const storedName = localStorage.getItem('userName');
+        if (welcomeMessage) {
+            if (storedName) {
+                // Use the stored name for the welcome message
+                welcomeMessage.textContent = `Hi ${storedName}, Welcome To Website`;
+            } else {
+                // Prompt for the name if not stored
+                const enteredName = prompt('Please enter your name:');
+                if (enteredName) {
+                    localStorage.setItem('userName', enteredName);
+                    welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+                }
+>>>>>>> parent of 1cf8a6c (Update script.js)
             }
         }
     }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const welcomeMessage = document.getElementById('welcomeMessage');
@@ -28,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
 >>>>>>> parent of 0d5dee7 (Update script.js)
 =======
 >>>>>>> parent of 77e7301 (Update script.js)
+=======
+
+>>>>>>> parent of 1cf8a6c (Update script.js)
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
