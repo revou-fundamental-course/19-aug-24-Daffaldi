@@ -1,4 +1,4 @@
-
+/*test*/
 
 html {
     scroll-behavior: smooth;
@@ -81,7 +81,6 @@ nav ul li a {
 }
 
 .welcome {
-    background-image: url(/assets/MHT.JPG);
     background-size: cover;
     background-position: center;
     height: 578px;
@@ -100,12 +99,10 @@ nav ul li a {
 .welcome h1,
 .welcome p {
     background-color: rgba(0, 0, 0, 0.65);
-    padding: 30px;
-    border-radius: 0px;
-    display: inline-block;
-    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
 }
-
 
 section {
     margin: 0;
@@ -292,10 +289,9 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
         flex-direction: column;
-        align-items: flex-start;
         padding: 10px;
     }
 
@@ -333,7 +329,6 @@ footer {
 }
 
 .banner {
-    background-image: url(/assets/profile.JPG);
     background-size: cover;
     background-position: center;
     height: 450px;
