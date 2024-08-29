@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const welcomeMessage = document.getElementById('welcomeMessage');
-    
-        const enteredName = prompt('Please enter your name:');
-
-            if (welcomeMessage) {
-                welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
-            }
-            window.location.reload();
+    const enteredName = prompt('Please enter your name:');
+    if (enteredName) {
+        if (welcomeMessage) {
+            welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
         }
+        window.location.reload();
     }
 });
+
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
