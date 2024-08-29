@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const welcomeMessage = document.getElementById('welcomeMessage');
     
-    // Check if the userName is already stored
-    const storedName = localStorage.getItem('userName');
-
         const enteredName = prompt('Please enter your name:');
-        if (enteredName) {
-            localStorage.setItem('userName', enteredName);
+
             if (welcomeMessage) {
                 welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
             }
