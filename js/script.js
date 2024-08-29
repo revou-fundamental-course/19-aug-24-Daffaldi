@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+<<<<<<< HEAD
     if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
         const welcomeMessage = document.getElementById('welcomeMessage');
         if (welcomeMessage) {
@@ -12,6 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+=======
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    const enteredName = prompt('Please enter your name:');
+    if (enteredName) {
+        localStorage.setItem('userName', enteredName);
+        (welcomeMessage) {
+            welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+        }
+        window.location.reload();
+    } 
+});
+>>>>>>> parent of 0d5dee7 (Update script.js)
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
