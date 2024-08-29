@@ -1,20 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
-        const welcomeMessage = document.getElementById('welcomeMessage');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+    const enteredName = prompt('Please enter your name:');
+    if (enteredName) {
+        localStorage.setItem('userName', enteredName);
         if (welcomeMessage) {
-            const userName = localStorage.getItem('userName');
-            if (!userName) {
-                const enteredName = prompt('Please enter your name:');
-                if (enteredName) {
-                    localStorage.setItem('userName', enteredName);
-                    document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
-                }
-            } else {
-                document.getElementById('welcomeMessage').textContent = `Hi ${userName}, Welcome To Website`;
-            }
+            welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+        }
+        window.location.reload();
+    } else {
+        if (welcomeMessage) {
+            welcomeMessage.textContent = 'Hi, Welcome to the Website';
         }
     }
-
+});
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
