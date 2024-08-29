@@ -3,15 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const enteredName = prompt('Please enter your name:');
     if (enteredName) {
         localStorage.setItem('userName', enteredName);
-        if (welcomeMessage) {
+        (welcomeMessage) {
             welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
         }
         window.location.reload();
-    } else {
-        if (welcomeMessage) {
-            welcomeMessage.textContent = 'Hi, Welcome to the Website';
-        }
-    }
+    } 
 });
 
     const contactForm = document.getElementById('messageForm');
