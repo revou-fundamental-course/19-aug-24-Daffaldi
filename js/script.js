@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const welcomeMessage = document.getElementById('welcomeMessage');
-    const enteredName = prompt('Please enter your name:');
-    
-    if (enteredName) {
-        localStorage.setItem('userName', enteredName);
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        const welcomeMessage = document.getElementById('welcomeMessage');
         if (welcomeMessage) {
-            welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+            const userName = localStorage.getItem('userName');
+            if (!userName) {
+                const enteredName = prompt('Please enter your name:');
+                if (enteredName) {
+                    localStorage.setItem('userName', enteredName);
+                    document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
+                }
+            } else {
+                document.getElementById('welcomeMessage').textContent = `Hi ${userName}, Welcome To Website`;
+            }
         }
     }
-});
-
 
 
     const contactForm = document.getElementById('messageForm');
