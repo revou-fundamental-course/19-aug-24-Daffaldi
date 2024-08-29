@@ -83,19 +83,22 @@ nav ul li a {
 .welcome {
     background-size: cover;
     background-position: center;
-    height: auto; /* Adjust as needed for your design */
+    height: 578px;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center the text */
-    padding: 50px 20px;
+    justify-content: normal;
+    align-items: normal;
+    text-align: start;
+    box-sizing: content-box;
+    padding-left: 0px;
+    padding-top: 30px;
+    padding-right: 50%;
 }
 
 .welcome h1,
 .welcome p {
-    background-color: rgba(0, 0, 0, 0.65); /* Semi-transparent background for better contrast */
+    background-color: rgba(0, 0, 0, 0.65);
     padding: 20px;
     border-radius: 5px;
     margin: 10px 0;
@@ -104,11 +107,11 @@ nav ul li a {
 @media (max-width: 600px) {
     .welcome {
         padding: 20px;
-        text-align: center; /* Adjust for smaller screens */
+        text-align: center;
     }
 
     #welcomeMessage {
-        font-size: 18px; /* Adjust font size for mobile devices */
+        font-size: 18px;
     }
 }
 
