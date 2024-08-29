@@ -31,12 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('userName', enteredName);
                     welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
                 }
+<<<<<<< HEAD
+>>>>>>> parent of 1cf8a6c (Update script.js)
+=======
 >>>>>>> parent of 1cf8a6c (Update script.js)
             }
         }
     }
 });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
 >>>>>>> parent of 0d5dee7 (Update script.js)
 =======
 >>>>>>> parent of 77e7301 (Update script.js)
+=======
+
+>>>>>>> parent of 1cf8a6c (Update script.js)
 =======
 
 >>>>>>> parent of 1cf8a6c (Update script.js)
