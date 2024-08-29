@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const welcomeMessage = document.getElementById('welcomeMessage');
-    const enteredName = prompt('Please enter your name:');
-    if (enteredName) {
-        localStorage.setItem('userName', enteredName);
-        (welcomeMessage) {
-            welcomeMessage.textContent = `Hi ${enteredName}, Welcome To Website`;
+    if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
+        const welcomeMessage = document.getElementById('welcomeMessage');
+        if (welcomeMessage) {
+            const userName = localStorage.getItem('userName');
+            if (!userName) {
+                const enteredName = prompt('Please enter your name:');
+                if (enteredName) {
+                    localStorage.setItem('userName', enteredName);
+                    document.getElementById('welcomeMessage').textContent = `Hi ${enteredName}, Welcome To Website`;
+                }
+            } else {
+                document.getElementById('welcomeMessage').textContent = `Hi ${userName}, Welcome To Website`;
+            }
         }
-        window.location.reload();
-    } 
-});
+    }
 
     const contactForm = document.getElementById('messageForm');
     if (contactForm) {
@@ -31,5 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
 
-
+localStorage.removeItem('userName');
