@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (welcomeMessage) {
                     welcomeMessage.textContent = `Hi ${newName}, Welcome To Website`;
                 }
-            }git pull
+            }
         });
     }
 });
